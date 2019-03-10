@@ -60,9 +60,9 @@ class Swap extends Component {
       outputValue: '',
       inputAmountB: '',
       lastEditedField: '',
-      deadlineDelta: '300',
-      allowedSlippage:'0.025',
-      tokenAllowedSlippage: '0.04',
+      deadlineDelta: '600',
+      allowedSlippage:'0.015',
+      tokenAllowedSlippage: '0.025',
     });
   }
 
@@ -601,13 +601,13 @@ class Swap extends Component {
     if (lastEditedField === INPUT) {
       switch(type) {
         case 'ETH_TO_TOKEN':
-          minOutput = BN(outputValue).multipliedBy(1 - allowedSlippage).toFixed(7).trim();
+          minOutput = BN(outputValue).multipliedBy(1 - +allowedSlippage).toFixed(7).trim();
           break;
         case 'TOKEN_TO_ETH':
-          minOutput = BN(outputValue).multipliedBy(1 - allowedSlippage).toFixed(7);
+          minOutput = BN(outputValue).multipliedBy(1 - +allowedSlippage).toFixed(7);
           break;
         case 'TOKEN_TO_TOKEN':
-          minOutput = BN(outputValue).multipliedBy(1 - tokenAllowedSlippage).toFixed(7);
+          minOutput = BN(outputValue).multipliedBy(1 - +tokenAllowedSlippage).toFixed(7);
           break;
         default:
           break;
@@ -617,13 +617,13 @@ class Swap extends Component {
     if (lastEditedField === OUTPUT) {
       switch (type) {
         case 'ETH_TO_TOKEN':
-          maxInput = BN(inputValue).multipliedBy(1 + allowedSlippage).toFixed(7).trim();
+          maxInput = BN(inputValue).multipliedBy(1 + +allowedSlippage).toFixed(7).trim();
           break;
         case 'TOKEN_TO_ETH':
-          maxInput = BN(inputValue).multipliedBy(1 + allowedSlippage).toFixed(7);
+          maxInput = BN(inputValue).multipliedBy(1 + +allowedSlippage).toFixed(7);
           break;
         case 'TOKEN_TO_TOKEN':
-          maxInput = BN(inputValue).multipliedBy(1 + tokenAllowedSlippage).toFixed(7);
+          maxInput = BN(inputValue).multipliedBy(1 + +tokenAllowedSlippage).toFixed(7);
           break;
         default:
           break;
