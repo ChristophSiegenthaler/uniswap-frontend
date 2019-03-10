@@ -410,7 +410,7 @@ class Swap extends Component {
           new web3.eth.Contract(EXCHANGE_ABI, fromToken[outputCurrency])
             .methods
             .ethToTokenSwapInput(
-              BN(outputValue).multipliedBy(10 ** outputDecimals).multipliedBy(1 - allowedSlippage).toFixed(0),
+              BN(outputValue).multipliedBy(10 ** outputDecimals).multipliedBy(1 - +allowedSlippage).toFixed(0),
               deadline,
             )
             .send({
@@ -428,7 +428,7 @@ class Swap extends Component {
             .methods
             .tokenToEthSwapInput(
               BN(inputValue).multipliedBy(10 ** inputDecimals).toFixed(0),
-              BN(outputValue).multipliedBy(10 ** outputDecimals).multipliedBy(1 - allowedSlippage).toFixed(0),
+              BN(outputValue).multipliedBy(10 ** outputDecimals).multipliedBy(1 - +allowedSlippage).toFixed(0),
               deadline,
             )
             .send({ from: account }, (err, data) => {
@@ -476,7 +476,7 @@ class Swap extends Component {
             )
             .send({
               from: account,
-              value: BN(inputValue).multipliedBy(10 ** inputDecimals).multipliedBy(1 + allowedSlippage).toFixed(0),
+              value: BN(inputValue).multipliedBy(10 ** inputDecimals).multipliedBy(1 + +allowedSlippage).toFixed(0),
             }, (err, data) => {
               if (!err) {
                 addPendingTx(data);
@@ -489,7 +489,7 @@ class Swap extends Component {
             .methods
             .tokenToEthSwapOutput(
               BN(outputValue).multipliedBy(10 ** outputDecimals).toFixed(0),
-              BN(inputValue).multipliedBy(10 ** inputDecimals).multipliedBy(1 + allowedSlippage).toFixed(0),
+              BN(inputValue).multipliedBy(10 ** inputDecimals).multipliedBy(1 + +allowedSlippage).toFixed(0),
               deadline,
             )
             .send({ from: account }, (err, data) => {
