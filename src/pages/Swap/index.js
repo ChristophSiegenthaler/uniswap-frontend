@@ -714,8 +714,17 @@ class Swap extends Component {
     const { value: outputBalance, decimals: outputDecimals } = selectors().getBalance(account, outputCurrency);
 
     const { inputError, outputError, isValid } = this.validate();
-    
-    const InputBalance = inputBalance.dividedBy(BN(10 ** inputDecimals));
+   
+    if (inputCurrency === 'ETH') {
+	    var InputBalance = inputBalance.dividedBy(BN(10 ** inputDecimals)) - 0.01;
+    }
+    else {
+	    var InputBalance = inputBalance.dividedBy(BN(10 ** inputDecimals));
+    }
+
+    if (InputBalance <= 0) {
+        InputBalance = 0;
+    }
 
     return (
       <div className="swap">
