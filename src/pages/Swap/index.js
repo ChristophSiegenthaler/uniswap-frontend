@@ -714,7 +714,8 @@ class Swap extends Component {
     const { value: outputBalance, decimals: outputDecimals } = selectors().getBalance(account, outputCurrency);
 
     const { inputError, outputError, isValid } = this.validate();
-
+    
+    const InputBalance = inputBalance.dividedBy(BN(10 ** inputDecimals));
 
     return (
       <div className="swap">
@@ -736,6 +737,7 @@ class Swap extends Component {
             title={t("input")}
             description={lastEditedField === OUTPUT ? estimatedText : ''}
             extraText={this.renderBalance(inputCurrency, inputBalance, inputDecimals)}
+	    onClickExtraText={() => this.updateInput(InputBalance)}
             onCurrencySelected={inputCurrency => this.setState({ inputCurrency }, this.recalcForm)}
             onValueChange={this.updateInput}
             selectedTokens={[inputCurrency, outputCurrency]}
