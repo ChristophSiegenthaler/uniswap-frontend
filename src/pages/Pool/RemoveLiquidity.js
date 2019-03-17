@@ -17,6 +17,8 @@ import { retry } from '../../helpers/promise-utils';
 import EXCHANGE_ABI from "../../abi/exchange";
 import ReactGA from "react-ga";
 
+const INPUT = 0;
+
 class RemoveLiquidity extends Component {
   static propTypes = {
     account: PropTypes.string,
@@ -368,6 +370,7 @@ class RemoveLiquidity extends Component {
         <CurrencyInputPanel
           title={t("poolTokens")}
           extraText={this.getBalance(tokenAddress)}
+	  onClickExtraText={() => this.getBalance(tokenAddress)}
           onValueChange={this.onInputChange}
           value={value}
           errorMessage={errorMessage}

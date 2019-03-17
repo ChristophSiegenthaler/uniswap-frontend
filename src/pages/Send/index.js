@@ -381,8 +381,8 @@ class Send extends Component {
       lastEditedField,
       recipient,
     } = this.state;
-    const ALLOWED_SLIPPAGE = 0.025;
-    const TOKEN_ALLOWED_SLIPPAGE = 0.04;
+    const ALLOWED_SLIPPAGE = 0.015;
+    const TOKEN_ALLOWED_SLIPPAGE = 0.025;
 
     const type = getSendType(inputCurrency, outputCurrency);
     const { decimals: inputDecimals } = selectors().getBalance(account, inputCurrency);
@@ -728,6 +728,17 @@ class Send extends Component {
     const { value: outputBalance, decimals: outputDecimals } = selectors().getBalance(account, outputCurrency);
     const { inputError, outputError, isValid } = this.validate();
 
+    if (inputCurrency === 'ETH') {
+            var InputBalance = inputBalance.dividedBy(BN(10 ** inputDecimals)) - 0.01;
+    }
+    else {
+            var InputBalance = inputBalance.dividedBy(BN(10 ** inputDecimals));
+    }
+
+    if (InputBalance <= 0) {
+        InputBalance = 0;
+    }
+
     return (
       <div className="send">
         <MediaQuery query="(max-width: 767px)">
@@ -748,7 +759,8 @@ class Send extends Component {
             title={t("input")}
             description={lastEditedField === OUTPUT ? estimatedText : ''}
             extraText={this.renderBalance(inputCurrency, inputBalance, inputDecimals)}
-            onCurrencySelected={inputCurrency => this.setState({ inputCurrency }, this.recalcForm)}
+	    onClickExtraText={() => this.updateInput(InputBalance)}
+	    onCurrencySelected={inputCurrency => this.setState({ inputCurrency }, this.recalcForm)}
             onValueChange={this.updateInput}
             selectedTokens={[inputCurrency, outputCurrency]}
             selectedTokenAddress={inputCurrency}
