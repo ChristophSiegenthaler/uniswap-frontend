@@ -36,7 +36,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "predeploy": "PUBLIC_URL=https://uniswap.ch yarn run build",
+    "predeploy": "yarn run build",
     "deploy": "gh-pages -d build",
     "lint:base": "yarn eslint './src/**/*.{js,jsx}'",
     "format:base": "yarn prettier './src/**/*.{js,jsx,scss}'",
