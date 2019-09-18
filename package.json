@@ -2,7 +2,7 @@
   "name": "uniswap",
   "description": "Uniswap Exchange Protocol",
   "version": "0.1.0",
-  "homepage": "http://uniswap.ch",
+  "homepage": "https://uniswap.ch",
   "private": true,
   "dependencies": {
     "@reach/dialog": "^0.2.8",
@@ -10,7 +10,7 @@
     "@uniswap/sdk": "^1.0.0-beta.4",
     "copy-to-clipboard": "^3.2.0",
     "escape-string-regexp": "^2.0.0",
-    "ethers": "^4.0.33",
+    "ethers": "^4.0.36",
     "gh-pages": "^2.1.1",
     "i18next": "^15.0.9",
     "i18next-browser-languagedetector": "^3.0.1",
@@ -29,15 +29,15 @@
     "react-switch": "^5.0.1",
     "serve": "^11.1.0",
     "styled-components": "^4.2.0",
-    "web3-react": "^5.0.4"
+    "web3-react": "5.0.5"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "predeploy": "yarn run build",
-    "deploy": "npm run build&&gh-pages -d build",
+    "predeploy": "PUBLIC_URL=https://uniswap.ch yarn run build",
+    "deploy": "gh-pages -d build",
     "lint:base": "yarn eslint './src/**/*.{js,jsx}'",
     "format:base": "yarn prettier './src/**/*.{js,jsx,scss}'",
     "fix:lint": "yarn lint:base --fix",

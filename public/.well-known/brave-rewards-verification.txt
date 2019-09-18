@@ -1,0 +1,4 @@
+This is a Brave Rewards publisher verification file.
+
+Domain: uniswap.ch
+Token: 4095425c163ae71f673556310894246a22bf02ff6e9e1460f3220a8883a890d3
