@@ -16,7 +16,7 @@ Token Symbol (from contract):
 Uniswap Exchange Address of Token: 
 
 Link to the official homepage of token:
-Link to CoinMarketCap page of token:
+Link to CoinMarketCap or CoinGecko page of token:
 
 Some tokens (e.g. BNB) do not work with Uniswap v1. In order to assess if your token works correctly, please complete small-value transactions of each of the types below, and submit the Etherscan transaction links for our review.
 Test `addLiquidity` transaction: 
@@ -25,3 +25,6 @@ Test `removeLiquidity` transaction:
 
 Are you willing to add liquidity to the liquidity pool for this token? (Y/N): 
 If so, how much liquidity are you willing to add?: 
+
+# WARNING
+Uniswap v1 is not compatible with any token that issues untrusted callbacks as part of a token transfer!  This includes all ERC-777 tokens.  Such a token will appear to work, but it will be suseptible to theft by attackers.

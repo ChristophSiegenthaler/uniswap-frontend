@@ -127,10 +127,10 @@ function getInitialSwapState(state) {
     independentValue: state.exactFieldURL && state.exactAmountURL ? state.exactAmountURL : '', // this is a user input
     dependentValue: '', // this is a calculated number
     independentField: state.exactFieldURL === 'output' ? OUTPUT : INPUT,
-    inputCurrency: state.inputCurrencyURL ? state.inputCurrencyURL : 'ETH',
+    inputCurrency: state.inputCurrencyURL ? state.inputCurrencyURL : state.outputCurrencyURL === 'ETH' ? '' : 'ETH',
     outputCurrency: state.outputCurrencyURL
       ? state.outputCurrencyURL === 'ETH'
-        ? state.inputCurrencyURL && state.inputCurrencyURL !== 'ETH'
+        ? !state.inputCurrencyURL || (state.inputCurrencyURL && state.inputCurrencyURL !== 'ETH')
           ? 'ETH'
           : ''
         : state.outputCurrencyURL
@@ -924,7 +924,7 @@ export default function ExchangePage({ initialCurrency, sending = false, params 
           {brokenTokenWarning
             ? 'Swap'
             : !account
-            ? 'Connect to a Wallet'
+            ? t('connectToWallet')
             : sending
             ? highSlippageWarning || customSlippageError === 'warning'
               ? t('sendAnyway')

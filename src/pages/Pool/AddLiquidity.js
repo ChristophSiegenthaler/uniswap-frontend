@@ -13,7 +13,7 @@ import { ReactComponent as Plus } from '../../assets/images/plus-blue.svg'
 import WarningCard from '../../components/WarningCard'
 
 import { useWeb3React, useExchangeContract } from '../../hooks'
-import { brokenTokens } from '../../constants'
+import { brokenTokens, broken777Tokens } from '../../constants'
 import { amountFormatter, calculateGasMargin } from '../../utils'
 import { useTransactionAdder } from '../../contexts/Transactions'
 import { useTokenDetails, INITIAL_TOKENS_CONTEXT } from '../../contexts/Tokens'
@@ -39,14 +39,14 @@ const BlueSpan = styled.span`
 const NewExchangeWarning = styled.div`
   margin-top: 1rem;
   padding: 1rem;
-  margin-bottom: 2rem;
+
   border: 1px solid rgba($pizazz-orange, 0.4);
   background-color: rgba($pizazz-orange, 0.1);
   border-radius: 1rem;
 `
 
 const NewExchangeWarningText = styled.div`
-  font-size: 0.75rem;
+  font-size: 0.8rem;
   line-height: 1rem;
   text-align: center;
 
@@ -228,6 +228,7 @@ export default function AddLiquidity({ params }) {
   const [zeroDecimalError, setZeroDecimalError] = useState()
 
   const [brokenTokenWarning, setBrokenTokenWarning] = useState()
+  const [broken777Warning, setBroken777Warning] = useState()
 
   const { symbol, decimals, exchangeAddress } = useTokenDetails(outputCurrency)
   const exchangeContract = useExchangeContract(exchangeAddress)
@@ -358,6 +359,9 @@ export default function AddLiquidity({ params }) {
     if (brokenTokenWarning) {
       contextualInfo = t('brokenToken')
       isError = true
+    } else if (broken777Warning) {
+      contextualInfo = t('broken777')
+      isError = true
     } else if (zeroDecimalError) {
       contextualInfo = zeroDecimalError
     } else if (inputError || outputError) {
@@ -439,6 +443,15 @@ export default function AddLiquidity({ params }) {
     for (let i = 0; i < brokenTokens.length; i++) {
       if (brokenTokens[i].toLowerCase() === outputCurrency.toLowerCase()) {
         setBrokenTokenWarning(true)
+      }
+    }
+  }, [outputCurrency])
+
+  useEffect(() => {
+    setBroken777Warning(false)
+    for (let i = 0; i < broken777Tokens.length; i++) {
+      if (broken777Tokens[i].toLowerCase() === outputCurrency.toLowerCase()) {
+        setBroken777Warning(true)
       }
     }
   }, [outputCurrency])
@@ -601,17 +614,6 @@ export default function AddLiquidity({ params }) {
   }, [newOutputDetected, setShowOutputWarning])
   return (
     <>
-      {isNewExchange ? (
-        <NewExchangeWarning>
-          <NewExchangeWarningText>
-            <span role="img" aria-label="first-liquidity">
-              🚰
-            </span>{' '}
-            {t('firstLiquidity')}
-          </NewExchangeWarningText>
-          <NewExchangeWarningText>{t('initialExchangeRate', { symbol })}</NewExchangeWarningText>
-        </NewExchangeWarning>
-      ) : null}
       {showOutputWarning && (
         <WarningCard
           onDismiss={() => {
@@ -716,6 +718,24 @@ export default function AddLiquidity({ params }) {
         </SummaryPanel>
       </OversizedPanel>
       {renderSummary()}
+      {isNewExchange ? (
+        <NewExchangeWarning>
+          <NewExchangeWarningText>
+            <span role="img" aria-label="first-liquidity">
+              🚰
+            </span>{' '}
+            {t('firstLiquidity')}
+          </NewExchangeWarningText>
+          <NewExchangeWarningText style={{ marginTop: '10px' }}>
+            {t('initialExchangeRate', { symbol })}
+          </NewExchangeWarningText>
+        </NewExchangeWarning>
+      ) : null}
+      {isNewExchange && (
+        <NewExchangeWarningText style={{ textAlign: 'center', marginTop: '10px' }}>
+          {t('initialWarning')}
+        </NewExchangeWarningText>
+      )}
       <Flex>
         <Button disabled={!isValid} onClick={onAddLiquidity}>
           {t('addLiquidity')}

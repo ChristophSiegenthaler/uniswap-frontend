@@ -407,6 +407,7 @@ export default function RemoveLiquidity({ params }) {
         value={value}
         errorMessage={inputError}
         selectedTokenAddress={outputCurrency}
+        hideETH={true}
       />
       <OversizedPanel>
         <DownArrowBackground>
