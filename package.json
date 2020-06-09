@@ -1,7 +1,7 @@
 {
   "name": "@uniswap/interface",
   "description": "Uniswap Interface",
-  "homepage": "https://v2.uniswap.ch",
+  "homepage": "https://uniswap.ch",
   "private": true,
   "devDependencies": {
     "@ethersproject/address": "^5.0.0-beta.134",
