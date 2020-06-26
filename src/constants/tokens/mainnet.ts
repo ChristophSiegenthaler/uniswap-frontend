@@ -25,13 +25,7 @@ export default [
   new Token(ChainId.MAINNET, '0x0Cf0Ee63788A0849fE5297F3407f701E122cC023', 18, 'DATA', 'Streamr DATAcoin'),
   new Token(ChainId.MAINNET, '0xE0B7927c4aF23765Cb51314A0E0521A9645F0E2A', 9, 'DGD', 'DigixDAO'),
   new Token(ChainId.MAINNET, '0x4f3AfEC4E5a3F2A6a1A411DEF7D7dFe50eE057bF', 9, 'DGX', 'Digix Gold Token'),
-  new Token(
-    ChainId.MAINNET,
-    '0xc719d010B63E5bbF2C0551872CD5316ED26AcD83',
-    18,
-    'DIP',
-    'Decentralized Insurance Protocol'
-  ),
+  new Token(ChainId.MAINNET, '0xc719d010B63E5bbF2C0551872CD5316ED26AcD83', 18, 'DIP', 'Decentralized Insurance Protocol'),
   new Token(ChainId.MAINNET, '0xC0F9bD5Fa5698B6505F643900FFA515Ea5dF54A9', 18, 'DONUT', 'Donut'),
   new Token(ChainId.MAINNET, '0x86FADb80d8D2cff3C3680819E4da99C10232Ba0F', 18, 'EBASE', 'EURBASE Stablecoin'),
   new Token(ChainId.MAINNET, '0xF629cBd94d3791C9250152BD8dfBDF380E2a3B9c', 18, 'ENJ', 'Enjin Coin'),
@@ -101,6 +95,7 @@ export default [
   new Token(ChainId.MAINNET, '0x57Ab1ec28D129707052df4dF418D58a2D46d5f51', 18, 'sUSD', 'Synth sUSD'),
   new Token(ChainId.MAINNET, '0x261EfCdD24CeA98652B9700800a13DfBca4103fF', 18, 'sXAU', 'Synth sXAU'),
   new Token(ChainId.MAINNET, '0x8CE9137d39326AD0cD6491fb5CC0CbA0e089b6A9', 18, 'SXP', 'Swipe'),
+  new Token(ChainId.MAINNET, '0x9bfb088c9f311415e3f9b507da73081c52a49d8c', 18, 'TAPE', 'BOY Cassette Tape by RAC'),
   new Token(ChainId.MAINNET, '0x00006100F7090010005F1bd7aE6122c3C2CF0090', 18, 'TAUD', 'TrueAUD'),
   new Token(ChainId.MAINNET, '0x00000100F2A2bd000715001920eB70D229700085', 18, 'TCAD', 'TrueCAD'),
   new Token(ChainId.MAINNET, '0x00000000441378008EA67F4284A57932B1c000a5', 18, 'TGBP', 'TrueGBP'),
