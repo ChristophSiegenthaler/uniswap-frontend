@@ -1,6 +1,3 @@
-// the Uniswap Default token list lives here
-export const DEFAULT_TOKEN_LIST_URL = 'tokens.uniswap.eth'
-
 // used to mark unsupported tokens, these are hosted lists of unsupported tokens
 /**
  * @TODO add list from blockchain association
@@ -19,6 +16,7 @@ const COINGECKO_LIST = 'https://tokens.coingecko.com/uniswap/all.json'
 const CMC_ALL_LIST = 'defi.cmc.eth'
 const CMC_STABLECOIN = 'stablecoin.cmc.eth'
 const KLEROS_LIST = 't2crtokens.eth'
+const GEMINI_LIST = 'https://www.gemini.com/uniswap/manifest.json'
 
 // lower index == higher priority for token import
 export const DEFAULT_LIST_OF_LISTS: string[] = [
@@ -34,8 +32,9 @@ export const DEFAULT_LIST_OF_LISTS: string[] = [
   CMC_ALL_LIST,
   CMC_STABLECOIN,
   KLEROS_LIST,
+  GEMINI_LIST,
   ...UNSUPPORTED_LIST_URLS // need to load unsupported tokens as well
 ]
 
 // default lists to be 'active' aka searched across
-export const DEFAULT_ACTIVE_LIST_URLS: string[] = [DEFAULT_TOKEN_LIST_URL]
+export const DEFAULT_ACTIVE_LIST_URLS: string[] = [GEMINI_LIST]
