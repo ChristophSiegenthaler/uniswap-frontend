@@ -9,10 +9,10 @@ import { useTotalSupply } from '../../data/TotalSupply'
 
 import { useActiveWeb3React } from '../../hooks'
 import { useTokenBalance } from '../../state/wallet/hooks'
-import { ExternalLink, TYPE } from '../../theme'
+import { TYPE } from '../../theme'
 import { currencyId } from '../../utils/currencyId'
 import { unwrappedToken } from '../../utils/wrappedCurrency'
-import { ButtonPrimary, ButtonSecondary, ButtonEmpty } from '../Button'
+import { ButtonPrimary, ButtonEmpty } from '../Button'
 import { transparentize } from 'polished'
 import { CardNoise } from '../earn/styled'
 
@@ -165,7 +165,7 @@ export default function FullPositionCard({ pair, border, stakedBalance }: Positi
   const currency0 = unwrappedToken(pair.token0)
   const currency1 = unwrappedToken(pair.token1)
 
-  const [showMore, setShowMore] = useState(false)
+  const [showMore, setShowMore] = useState(true)
 
   const userDefaultPoolBalance = useTokenBalance(account ?? undefined, pair.liquidityToken)
   const totalPoolTokens = useTotalSupply(pair.liquidityToken)
@@ -292,14 +292,6 @@ export default function FullPositionCard({ pair, border, stakedBalance }: Positi
               </Text>
             </FixedHeightRow>
 
-            <ButtonSecondary padding="8px" borderRadius="8px">
-              <ExternalLink
-                style={{ width: '100%', textAlign: 'center' }}
-                href={`https://uniswap.info/account/${account}`}
-              >
-                View accrued fees and analytics<span style={{ fontSize: '11px' }}>↗</span>
-              </ExternalLink>
-            </ButtonSecondary>
             {userDefaultPoolBalance && JSBI.greaterThan(userDefaultPoolBalance.raw, BIG_INT_ZERO) && (
               <RowBetween marginTop="10px">
                 <ButtonPrimary
