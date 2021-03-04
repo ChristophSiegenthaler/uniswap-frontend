@@ -11,6 +11,7 @@ import { NetworkContextName } from './constants'
 import './i18n'
 import App from './pages/App'
 import store from './state'
+import * as serviceWorkerRegistration from './serviceWorkerRegistration'
 import ApplicationUpdater from './state/application/updater'
 import ListsUpdater from './state/lists/updater'
 import MulticallUpdater from './state/multicall/updater'
@@ -21,8 +22,8 @@ import getLibrary from './utils/getLibrary'
 
 const Web3ProviderNetwork = createWeb3ReactRoot(NetworkContextName)
 
-if ('ethereum' in window) {
-  ;(window.ethereum as any).autoRefreshOnNetworkChange = false
+if (!!window.ethereum) {
+  window.ethereum.autoRefreshOnNetworkChange = false
 }
 
 const GOOGLE_ANALYTICS_ID: string | undefined = process.env.REACT_APP_GOOGLE_ANALYTICS_ID
@@ -75,3 +76,5 @@ ReactDOM.render(
   </StrictMode>,
   document.getElementById('root')
 )
+
+serviceWorkerRegistration.unregister()

@@ -1,5 +1,4 @@
 import { useAllLists } from 'state/lists/hooks'
-import { UNSUPPORTED_LIST_URLS } from './../../constants/lists'
 import { getVersionUpgrade, minVersionBump, VersionUpgrade } from '@uniswap/token-lists'
 import { useCallback, useEffect } from 'react'
 import { useDispatch } from 'react-redux'
@@ -11,6 +10,7 @@ import { AppDispatch } from '../index'
 import { acceptListUpdate } from './actions'
 import { useActiveListUrls } from './hooks'
 import { useAllInactiveTokens } from 'hooks/Tokens'
+import { UNSUPPORTED_LIST_URLS } from 'constants/lists'
 
 export default function Updater(): null {
   const { library } = useActiveWeb3React()
@@ -45,6 +45,16 @@ export default function Updater(): null {
     })
   }, [dispatch, fetchList, library, lists])
 
+  // if any lists from unsupported lists are loaded, check them too (in case new updates since last visit)
+  useEffect(() => {
+    Object.keys(UNSUPPORTED_LIST_URLS).forEach(listUrl => {
+      const list = lists[listUrl]
+      if (!list || (!list.current && !list.loadingRequestId && !list.error)) {
+        fetchList(listUrl).catch(error => console.debug('list added fetching error', error))
+      }
+    })
+  }, [dispatch, fetchList, library, lists])
+
   // automatically update lists if versions are minor/patch
   useEffect(() => {
     Object.keys(lists).forEach(listUrl => {
@@ -67,11 +77,9 @@ export default function Updater(): null {
             }
             break
 
+          // update any active or inactive lists
           case VersionUpgrade.MAJOR:
-            // accept update if list is active or list in background
-            if (activeListUrls?.includes(listUrl) || UNSUPPORTED_LIST_URLS.includes(listUrl)) {
-              dispatch(acceptListUpdate(listUrl))
-            }
+            dispatch(acceptListUpdate(listUrl))
         }
       }
     })
