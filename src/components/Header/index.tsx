@@ -7,9 +7,8 @@ import { Trans } from '@lingui/macro'
 import { Moon, Sun } from 'react-feather'
 import styled from 'styled-components/macro'
 
-import Logo from '../../assets/svg/logo.svg'
-import LogoDark from '../../assets/svg/logo_white.svg'
 import { SupportedChainId } from '../../constants/chains'
+import Logo from '../../assets/svg/unicorn.svg'
 
 import { useActiveWeb3React } from '../../hooks/web3'
 import { useDarkModeManager } from '../../state/user/hooks'
@@ -339,7 +338,7 @@ export default function Header() {
       <HeaderRow>
         <Title href=".">
           <UniIcon>
-            <img width={'24px'} src={darkMode ? LogoDark : Logo} alt="logo" />
+            <img width={'24px'} src={Logo} alt="logo" />
           </UniIcon>
         </Title>
       </HeaderRow>
