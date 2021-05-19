@@ -22,6 +22,7 @@ import Row, { AutoRow, RowFixed } from '../../components/Row'
 import BetterTradeLink from '../../components/swap/BetterTradeLink'
 import confirmPriceImpactWithoutFee from '../../components/swap/confirmPriceImpactWithoutFee'
 import ConfirmSwapModal from '../../components/swap/ConfirmSwapModal'
+import { useTranslation } from 'react-i18next'
 
 import { ArrowWrapper, BottomGrouping, Dots, SwapCallbackError, Wrapper } from '../../components/swap/styleds'
 import SwapHeader from '../../components/swap/SwapHeader'
@@ -67,6 +68,7 @@ const StyledInfo = styled(Info)`
 
 export default function Swap({ history }: RouteComponentProps) {
   const loadedUrlParams = useDefaultsFromURLSearch()
+  const { t } = useTranslation()
 
   // token warning stuff
   const [loadedInputCurrency, loadedOutputCurrency] = [
@@ -493,7 +495,7 @@ export default function Swap({ history }: RouteComponentProps) {
                   <TYPE.main mb="4px">Unsupported Asset</TYPE.main>
                 </ButtonPrimary>
               ) : !account ? (
-                <ButtonLight onClick={toggleWalletModal}>Connect Wallet</ButtonLight>
+                <ButtonLight onClick={toggleWalletModal}>{t('wallet.connect')}</ButtonLight>
               ) : showWrap ? (
                 <ButtonPrimary disabled={Boolean(wrapInputError)} onClick={onWrap}>
                   {wrapInputError ??
