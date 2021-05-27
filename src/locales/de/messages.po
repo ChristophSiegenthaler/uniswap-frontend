@@ -16,19 +16,19 @@ msgstr ""
 
 #: src/pages/AddLiquidity/index.tsx:528
 msgid "addLiquidity.labels.currentPrice"
-msgstr ""
+msgstr "Aktueller {0} Kurs:"
 
 #: src/pages/AddLiquidity/index.tsx:574
 msgid "addLiquidity.labels.selectLiquidityRange"
-msgstr ""
+msgstr "Wechselkursbereich festlegen"
 
 #: src/pages/AddLiquidity/index.tsx:439
 msgid "addLiquidity.labels.selectPair"
-msgstr ""
+msgstr "Token-Paar auswählen"
 
 #: src/pages/AddLiquidity/index.tsx:500
 msgid "addLiquidity.labels.selectStartingPrice"
-msgstr ""
+msgstr "Startpreis"
 
 #: src/pages/AddLiquidity/index.tsx:484
 msgid "addLiquidity.labels.selectedRange"
@@ -77,38 +77,38 @@ msgstr "Top pools"
 
 #: src/pages/Pool/CTACards.tsx:143
 msgid "cta.v3.explore"
-msgstr "Beliebte Pools "
+msgstr "Schau dir beliebte Pools auf Uniswap Analytics an."
 
 #: src/pages/Pool/CTACards.tsx:126
 msgid "cta.v3.launchAnnouncement"
-msgstr ""
+msgstr "Uniswap V3 ist da!"
 
 #: src/pages/Pool/CTACards.tsx:129
 msgid "cta.v3.walkthroughAndMigration"
-msgstr ""
+msgstr "Schau dir unser v3 Tutorial sowie die Hilfe an um Liquidität zu migrieren."
 
 #: src/components/PositionPreview/index.tsx:126
 #: src/components/PositionPreview/index.tsx:145
 #: src/components/PositionPreview/index.tsx:164
 #: src/pages/Pool/PositionPage.tsx:173 src/pages/Pool/PositionPage.tsx:807
 msgid "currencies.denominated"
-msgstr ""
+msgstr "{0} pro {1}"
 
 #: src/components/CurrencyInputPanel/index.tsx:280
 msgid "currencies.input.max"
-msgstr ""
+msgstr "(Max.)"
 
 #: src/components/CurrencyInputPanel/index.tsx:202
 msgid "currencies.input.priceOutsideWarning"
-msgstr ""
+msgstr "Der Marktpreis ist ausserhalb deines spezifizierten Preisbereichs. Einseitige Liquiditätsprovision möglich."
 
 #: src/components/SearchModal/CurrencySearch.tsx:220
 msgid "currencies.search.noResults"
-msgstr ""
+msgstr "Keine Suchergebnisse."
 
 #: src/components/SearchModal/CurrencySearch.tsx:182
 msgid "currencies.search.placeholder"
-msgstr ""
+msgstr "Suche Tokenname oder füge Tokenadresse ein"
 
 #: src/components/CurrencyInputPanel/index.tsx:240
 #: src/components/SearchModal/CurrencySearch.tsx:174
@@ -118,79 +118,79 @@ msgstr "Token auswählen"
 
 #: src/components/Web3Status/index.tsx:214
 msgid "error.generic"
-msgstr ""
+msgstr "Fehler"
 
 #: src/pages/AddLiquidity/index.tsx:654
 msgid "error.invalidRangeWarning"
-msgstr ""
+msgstr "Ungültiger Bereich eingegeben. Der min Preis muss tiefer als der max Preis sein."
 
 #: src/pages/AddLiquidity/index.tsx:708
 msgid "error.unsupportedAsset"
-msgstr ""
+msgstr "Token wird nicht unterstützt"
 
 #: src/pages/Swap/index.tsx:514
 msgid "error.unsupportedAssets"
-msgstr ""
+msgstr "Token werden nicht unterstützt"
 
 #: src/components/Web3Status/index.tsx:213
 msgid "error.wrongNetwork"
-msgstr ""
+msgstr "Falsches Netzwerk"
 
 #: src/components/Web3ReactManager/index.tsx:61
 msgid "errors.unknown"
-msgstr "Oops! Ein unbekannter Fehler ist aufgetreten. Bitte Seite neu laden oder uns von einem anderen Browser oder Gerät erneut besuchen."
+msgstr "Oops! Ein unbekannter Fehler ist aufgetreten. Bitte Seite neu laden oder von einem anderen Browser oder Gerät erneut besuchen."
 
 #: src/pages/AddLiquidity/index.tsx:640
 msgid "inactiveRangeWarning"
-msgstr ""
+msgstr "Deine Position wird erst Gebühren einnehmen und am Handel teilnehmen wenn der Preis sich in den Preisbereich bewegt."
 
 #: src/pages/RemoveLiquidity/V3.tsx:307
 msgid "labels.amount"
-msgstr ""
+msgstr "Anzahl"
 
 #: src/pages/RemoveLiquidity/V3.tsx:413
 msgid "labels.inactive"
-msgstr ""
+msgstr "Inaktiv"
 
 #: src/pages/RemoveLiquidity/V3.tsx:324
 msgid "labels.max"
-msgstr ""
+msgstr "Max"
 
 #: src/pages/RemoveLiquidity/V3.tsx:415
 msgid "labels.remove"
-msgstr ""
+msgstr "Entfernen"
 
 #: src/pages/AddLiquidity/index.tsx:672
 msgid "liquidity.depositAmounts"
-msgstr ""
+msgstr "Liquidität hinzufügen"
 
 #: src/pages/MigrateV2/MigrateV2Pair.tsx:659
 msgid "migrate.buttons.migrate"
-msgstr ""
+msgstr "Migrieren"
 
 #: src/pages/MigrateV2/MigrateV2Pair.tsx:656
 msgid "migrate.buttons.migrating"
-msgstr ""
+msgstr "Migriere"
 
 #: src/pages/MigrateV2/MigrateV2Pair.tsx:586
 msgid "migrate.errors.invalidRangeWarning"
-msgstr ""
+msgstr "Ungültiger Bereich eingegeben. Der min Preis muss tiefer als der max Preis sein."
 
 #: src/pages/MigrateV2/MigrateV2Pair.tsx:458
 msgid "migrate.hint.firstV3LPGasCost"
-msgstr ""
+msgstr "Die Transaktionskosten fallen höher als üblich aus da sie teils zum Erstellen des neuen Pools verwendet werden."
 
 #: src/pages/MigrateV2/MigrateV2Pair.tsx:451
 msgid "migrate.hint.firstV3LiquidityProvider"
-msgstr ""
+msgstr "Du bist der erste Liquiditätsprovider für diesen Uniswap V3 pool. Deine Liquidität wird zum aktuellen Kurs von {0} migriert."
 
 #: src/pages/MigrateV2/MigrateV2Pair.tsx:404
 msgid "migrate.hint.migrationContract"
-msgstr ""
+msgstr "Uniswap Migrations-contract↗"
 
 #: src/pages/MigrateV2/MigrateV2Pair.tsx:519
 msgid "migrate.hint.priceHint"
-msgstr ""
+msgstr "Du solltest nur Liquidität zu dem Preis hinzufügen, den du als angemessen betrachtest. <0/>Falls der Preis falsch erscheint kannst du entweder den Preis per Tausch korrigieren oder warten bis dies durch jemanden erledigt wird."
 
 #: src/pages/MigrateV2/MigrateV2Pair.tsx:397
 msgid "migrate.hint.toolInformation"
@@ -746,20 +746,20 @@ msgstr ""
 #: src/pages/AddLiquidity/index.tsx:713 src/pages/Pool/index.tsx:243
 #: src/pages/RemoveLiquidity/index.tsx:622 src/pages/Swap/index.tsx:519
 msgid "wallet.connect"
-msgstr ""
+msgstr "Wallet verbinden"
 
 #: src/components/Web3Status/index.tsx:222
 msgid "wallet.connectLongForm"
-msgstr ""
+msgstr "Mit einer Wallet verbinden"
 
 #: src/components/Header/index.tsx:393
 msgid "wallet.ethBalance"
-msgstr ""
+msgstr "{0} ETH"
 
 #: src/components/Web3Status/index.tsx:130
 msgid "wallet.hasSocks"
-msgstr ""
+msgstr "Hat $SOCKS emoji"
 
 #: src/pages/MigrateV2/MigrateV2Pair.tsx:745
 msgid "wallet.mustConnectAccount"
-msgstr ""
+msgstr "Du musst einen Account verbinden."
