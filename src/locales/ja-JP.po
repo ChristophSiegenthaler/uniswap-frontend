@@ -14,7 +14,7 @@ msgstr ""
 "X-Crowdin-File-ID: 4\n"
 "Project-Id-Version: uniswap-interface\n"
 "Language-Team: Japanese\n"
-"PO-Revision-Date: 2021-06-05 21:08\n"
+"PO-Revision-Date: 2021-06-06 01:33\n"
 
 #: src/pages/Pool/PositionPage.tsx
 #: src/pages/Pool/PositionPage.tsx
@@ -109,15 +109,15 @@ msgstr "V3に<0>戻る</0>"
 
 #: src/pages/RemoveLiquidity/index.tsx
 msgid "<0>Tip:</0> Removing pool tokens converts your position back into underlying tokens at the current rate, proportional to your share of the pool. Accrued fees are included in the amounts you receive."
-msgstr "<0>ヒント:</0>流動性トークンを削除すると、プールののシェアに比例して現在の価格で元のトークンに戻ります。受け取った報酬は受け取るトークンに含まれます。"
+msgstr "<0>ヒント:</0> 流動性トークンを削除すると、プールのシェアに比例して現在の価格で元のトークンに戻ります。発生した報酬は受け取るトークンに含まれます。"
 
 #: src/pages/PoolFinder/index.tsx
 msgid "<0>Tip:</0> Use this tool to find v2 pools that don't automatically appear in the interface."
-msgstr "<0>ヒント:</0>このツールを使用して、インターフェースに自動的に表示されない v2 プールを見つけます。"
+msgstr "<0>ヒント:</0> このツールを使用して、画面に自動表示されないV2のプールを見つけます。"
 
 #: src/pages/AddLiquidityV2/index.tsx
 msgid "<0>Tip:</0> When you add liquidity, you will receive pool tokens representing your position. These tokens automatically earn fees proportional to your share of the pool, and can be redeemed at any time."
-msgstr "<0>ヒント:</0> 流動性を追加するとそれを表す流動性トークンを受け取ります。 流動性トークンはプールのシェアに応じて自動的に報酬を獲得します。また、流動性トークンはいつでも償還できます。"
+msgstr "<0>ヒント:</0> 流動性を追加すると、そのポジションを表す流動性トークンを受け取ります。 流動性トークンはプールのシェアに応じて自動的に報酬を獲得します。また、流動性トークンはいつでも償還できます。"
 
 #: src/pages/Vote/VotePage.tsx
 msgid "<0>Unlock voting</0> to prepare for the next proposal."
@@ -271,7 +271,7 @@ msgstr "自動"
 
 #: src/components/earn/StakingModal.tsx
 msgid "Available to deposit: {0}"
-msgstr "入金可能： {0}"
+msgstr "預入れ可能： {0}"
 
 #: src/components/WalletModal/index.tsx
 msgid "Back"
@@ -295,7 +295,7 @@ msgstr "ほとんどのペアに最適"
 
 #: src/components/FeeSelector/index.tsx
 msgid "Best for stable pairs."
-msgstr "ステーブルなペアに最適"
+msgstr "変動のないペアに最適"
 
 #: src/components/Blocklist/index.tsx
 msgid "Blocked address"
@@ -303,7 +303,7 @@ msgstr "ブロックされたアドレス"
 
 #: src/components/PositionCard/index.tsx
 msgid "By adding liquidity you'll earn 0.3% of all trades on this pair proportional to your share of the pool. Fees are added to the pool, accrue in real time and can be claimed by withdrawing your liquidity."
-msgstr "流動性を追加することで、すべての取引で発生する0.3%の手数料のうち、プールのシェアに応じて報酬を獲得します。報酬はリアルタイムにプールに追加され、反映されます。報酬は流動性を引き出すことで請求できます。"
+msgstr "流動性を追加することで、すべての取引で発生する0.3%の手数料のうち、プールのシェアに応じた報酬を獲得します。報酬はリアルタイムにプールに追加され、反映されます。報酬は流動性を引き出すことで請求できます。"
 
 #: src/components/SearchModal/ImportList.tsx
 msgid "By adding this list you are implicitly trusting that the data is correct. Anyone can create a list, including creating fake versions of existing lists and lists that claim to represent projects that do not have one."
@@ -350,7 +350,7 @@ msgstr "UNI報酬を請求する"
 
 #: src/pages/Pool/PositionPage.tsx
 msgid "Claim fees"
-msgstr "手数料を請求する"
+msgstr "報酬を請求する"
 
 #: src/components/Popups/ClaimPopup.tsx
 msgid "Claim your UNI tokens"
@@ -516,7 +516,7 @@ msgstr "ペアを作成"
 
 #: src/pages/Pool/index.tsx
 msgid "Create a pool"
-msgstr "プールを作成"
+msgstr "流動性を追加"
 
 #: src/components/ErrorBoundary/index.tsx
 msgid "Create an issue on GitHub"
@@ -620,11 +620,11 @@ msgstr "注文を取り下げる"
 
 #: src/components/Menu/index.tsx
 msgid "Docs"
-msgstr "ドキュメント"
+msgstr "資料"
 
 #: src/pages/MigrateV2/index.tsx
 msgid "Don’t see one of your v2 positions? <0>Import it.</0>"
-msgstr "V2での流動性が表示されない場合 <0>インポートしてください</0>"
+msgstr "V2の流動性が表示されない場合、該当のトークンを<0>インポート</0>してください"
 
 #: src/components/vote/DelegateModal.tsx
 msgid "Earned UNI tokens represent voting shares in Uniswap governance."
@@ -701,7 +701,7 @@ msgstr "賛成"
 
 #: src/pages/MigrateV2/index.tsx
 msgid "For each pool shown below, click migrate to remove your liquidity from Uniswap V2 and deposit it into Uniswap V3."
-msgstr "各プールの「移行」ボタンをクリックすると、Uniswap V2から流動性を取り出し、Uniswap V3に移行します。"
+msgstr "以下の各流動性について「移行」ボタンをクリックすると、Uniswap V2から流動性を取り出し、Uniswap V3に移行します。"
 
 #: src/components/swap/SwapModalHeader.tsx
 #: src/pages/Swap/index.tsx
@@ -815,7 +815,7 @@ msgstr "無効な価格"
 #: src/pages/AddLiquidity/index.tsx
 #: src/pages/MigrateV2/MigrateV2Pair.tsx
 msgid "Invalid range selected. The min price must be lower than the max price."
-msgstr "指定した価格帯が間違っています。最小価格は最大価格より低くしてください。"
+msgstr "設定した価格帯が間違っています。最小価格は最大価格より低くしてください。"
 
 #: src/state/swap/hooks.ts
 msgid "Invalid recipient"
@@ -823,7 +823,7 @@ msgstr "受け取りアドレスが無効です"
 
 #: src/pages/Pool/index.tsx
 msgid "Learn"
-msgstr "詳細情報"
+msgstr "資料"
 
 #: src/components/claim/ClaimModal.tsx
 #: src/pages/Pool/PositionPage.tsx
@@ -840,7 +840,7 @@ msgstr "流動性提供者の報酬"
 
 #: src/pages/Pool/v2.tsx
 msgid "Liquidity providers earn a 0.3% fee on all trades proportional to their share of the pool. Fees are added to the pool, accrue in real time and can be claimed by withdrawing your liquidity."
-msgstr "流動性提供者はすべての取引で発生する0.3%の手数料のうち、プールのシェアに応じて報酬を獲得します。 報酬はリアルタイムにプールに追加され、反映されます。報酬は流動性を引き出すことで請求できます。"
+msgstr "流動性提供者はすべての取引で発生する0.3%の手数料のうち、プールのシェアに応じた報酬を獲得します。 報酬はリアルタイムにプールに追加され、反映されます。報酬は流動性を引き出すことで請求できます。"
 
 #: src/components/SearchModal/Manage.tsx
 msgid "Lists"
@@ -1049,7 +1049,7 @@ msgstr "参加中のプール"
 
 #: src/components/WalletModal/index.tsx
 msgid "Please connect to the appropriate Ethereum network."
-msgstr "適切なEthereumネットワークに接続してください。"
+msgstr "適切なイーサリアムネットワークに接続してください。"
 
 #: src/components/Settings/index.tsx
 msgid "Please type the word \"{confirmWord}\" to enable expert mode."
@@ -1334,7 +1334,7 @@ msgstr "入力トークンは転送できません。入力トークンに問題
 
 #: src/components/CurrencyInputPanel/index.tsx
 msgid "The market price is outside your specified price range. Single-asset deposit only."
-msgstr "市場価格が指定した価格帯から外れています。単一トークンのみ預け入れできます。"
+msgstr "市場価格が設定した価格帯から外れています。単一トークンのみ預け入れできます。"
 
 #: src/hooks/useSwapCallback.ts
 msgid "The output token cannot be transferred. There may be an issue with the output token."
@@ -1346,11 +1346,11 @@ msgstr "買うトークンは転送できません。買うトークンに問題
 
 #: src/components/Badge/RangeBadge.tsx
 msgid "The price of this pool is outside of your selected range. Your position is not currently earning fees."
-msgstr "現在の価格は指定した価格帯から外れています。そのため、現時点であなたのポジションは報酬を獲得しません。"
+msgstr "現在の価格は設定した価格帯から外れています。そのため、現時点であなたのポジションは報酬を獲得しません。"
 
 #: src/components/Badge/RangeBadge.tsx
 msgid "The price of this pool is within your selected range. Your position is currently earning fees."
-msgstr "現在の価格は指定した価格帯に入っています。そのため、現時点であなたのポジションは報酬を獲得できます。"
+msgstr "現在の価格は設定した価格帯に入っています。そのため、現在であなたの流動性は報酬を獲得しています。"
 
 #: src/pages/AddLiquidityV2/index.tsx
 msgid "The ratio of tokens you add will set the price of this pool."
@@ -1382,7 +1382,7 @@ msgstr "この取引は、価格変動または転送時の手数料のいずれ
 
 #: src/components/SearchModal/ManageTokens.tsx
 msgid "Tip: Custom tokens are stored locally in your browser"
-msgstr "ヒント：カスタムトークンはブラウザにローカルに保存されます"
+msgstr "ヒント：カスタムトークンの設定はブラウザ内に保存されます"
 
 #: src/components/swap/SwapModalHeader.tsx
 #: src/pages/Swap/index.tsx
@@ -1624,7 +1624,7 @@ msgstr "投票は終了しました {0}"
 
 #: src/pages/Vote/VotePage.tsx
 msgid "Voting ends approximately {0}"
-msgstr "投票は約 {0} で終了します"
+msgstr "投票は {0} 頃に終了します"
 
 #: src/components/TransactionConfirmationModal/index.tsx
 msgid "Waiting For Confirmation"
@@ -1744,7 +1744,7 @@ msgstr "預け入れた流動性"
 
 #: src/pages/AddLiquidity/index.tsx
 msgid "Your liquidity will only earn fees when the market price of the pair is within your range. <0>Need help picking a range?</0>"
-msgstr "流動性は、指定した価格帯にペアの価格が入っている場合のみ報酬を獲得します。 価格帯の指定に関するガイドは<0>こちら</0>"
+msgstr "流動性は、設定する価格帯内にペアの市場価格が入っている場合のみ報酬を獲得します。 価格帯の設定ガイドは<0>こちら</0>"
 
 #: src/components/PositionCard/V2.tsx
 #: src/components/PositionCard/index.tsx
