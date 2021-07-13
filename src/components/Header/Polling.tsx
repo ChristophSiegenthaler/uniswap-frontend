@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from 'react'
-import styled, { keyframes } from 'styled-components'
+import { useEffect, useState } from 'react'
+import styled, { keyframes } from 'styled-components/macro'
 import { useActiveWeb3React } from '../../hooks/web3'
 
 import { useBlockNumber } from '../../state/application/hooks'
