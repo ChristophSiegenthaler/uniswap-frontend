@@ -261,11 +261,11 @@ export default function Header() {
       <Modal isOpen={showUniBalanceModal} onDismiss={() => setShowUniBalanceModal(false)}>
         <UniBalanceContent setShowUniBalanceModal={setShowUniBalanceModal} />
       </Modal>
-        <Title href=".">
-          <UniIcon>
-            <img width={'24px'} src={Logo} alt="logo" />
-          </UniIcon>
-        </Title>
+      <Title href=".">
+        <UniIcon>
+          <img width={'24px'} src={Logo} alt="logo" />
+        </UniIcon>
+      </Title>
       <HeaderLinks>
         <StyledNavLink id={`swap-nav-link`} to={'/swap'}>
           <Trans>Swap</Trans>
